@@ -1,0 +1,108 @@
+html, body {
+	 width: 100%;
+	 height: 100%;
+}
+ body {
+	 background: #f1513b;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+}
+ .man {
+	 width: 200px;
+	 margin-top: 40px;
+	 height: 360px;
+}
+ .head {
+	 width: 70px;
+	 height: 70px;
+	 background-color: #fff;
+	 border-radius: 50%;
+	 animation-name: body;
+	 animation-duration: 4s;
+	 animation-iteration-count: infinite;
+	 animation-timing-function: ease-in-out;
+}
+ .body {
+	 height: 144px;
+	 width: 62px;
+	 background-color: #fff;
+	 border-radius: 100% 20% 0 0;
+	 transform: skewX(-2deg);
+	 position: relative;
+	 left: -50px;
+	 animation-name: body;
+	 animation-duration: 4s;
+	 animation-iteration-count: infinite;
+	 animation-timing-function: ease-in-out;
+}
+ .foot {
+	 width: 40px;
+	 height: 14px;
+	 border-radius: 10px 80% 4px 4px;
+	 transform: skewX(5deg);
+	 background-color: #fff;
+	 display: inline-block;
+	 animation-name: foot;
+	 animation-duration: 1.8s;
+	 animation-iteration-count: infinite;
+	 animation-timing-function: ease-in-out;
+}
+ .foot:last-child {
+	 margin-left: -40px;
+	 animation-delay: 0.9s;
+}
+ .feet {
+	 text-align: left;
+	 position: relative;
+	 top: 100px;
+	 left: -66px;
+}
+ .feet:before {
+	 width: 120px;
+	 height: 8px;
+	 border-radius: 50%;
+	 content: "";
+	 background: rgba(0, 0, 0, .1);
+	 position: absolute;
+	 bottom: -2px;
+	 left: -16px;
+	 animation-name: shadow;
+	 animation-duration: 3s;
+	 animation-iteration-count: infinite;
+	 animation-timing-function: ease-in-out;
+}
+ @keyframes foot {
+	 20% {
+		 transform: translate3d(34px, -16px, 0) rotate(4deg);
+	}
+	 26% {
+		 transform: translate3d(34px, -10px, 4) rotate(0deg);
+	}
+	 40% {
+		 transform: translate3d(56px, -6px, 0) rotate(-6deg);
+	}
+	 44% {
+		 transform: translate3d(56px, 0, 0) rotate(0deg);
+	}
+}
+ @keyframes body {
+	 25% {
+		 transform: translateY(5px);
+	}
+	 50% {
+		 transform: translateY(0);
+	}
+	 75% {
+		 transform: translateY(5px);
+	}
+}
+ @keyframes shadow {
+	 25% {
+		 transform: scale(1.1);
+	}
+	 75% {
+		 transform: scale(0.96);
+	}
+}
+ 
